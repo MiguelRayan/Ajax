@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ServidorImagens</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="container">
+        <img id="imagem" src="servidorImagens.js" alt="Imagem da galeria">
+        <br>
+        <button id="proximaBtn">Próxima</button>
+    </div>
+
+    <script>
+        function carregarProximaImagem() {
+            fetch('/imagens')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('imagem').src = data.url;
+                })
+                .catch(error => console.error('Erro ao carregar a imagem:', error));
+        }
+
+        window.onload = function() {
+            carregarProximaImagem();
+        };
+
+        document.getElementById('proximaBtn').onclick = carregarProximaImagem;
+    </script>
+</body>
+</html>

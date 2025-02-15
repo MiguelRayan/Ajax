@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax-Web2</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Consulta de Endereço pelo CEP</h1>
+        <form id="cep-form">
+            <label for="cep">CEP:</label>
+            <input type="text" id="cep" name="cep" maxlength="9" placeholder="Digite o CEP" required>
+
+
+            <label for="logradouro">Logradouro:</label>
+            <input type="text" id="logradouro" name="logradouro" readonly>
+
+
+            <label for="bairro">Bairro:</label>
+            <input type="text" id="bairro" name="bairro" readonly>
+
+
+            <label for="cidade">Cidade:</label>
+            <input type="text" id="cidade" name="cidade" readonly>
+
+
+            <label for="estado">Estado:</label>
+            <input type="text" id="estado" name="estado" readonly>
+        </form>
+    </div>
+
+
+    <script src="scriptCEP.js"></script>
+</body>
+</html>
